@@ -89,7 +89,6 @@ public class UserServiceImp implements UserService, UserDetailsService {
         save(user2);
     }
 
-    @Transactional
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));

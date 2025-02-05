@@ -6,14 +6,13 @@ import org.springframework.stereotype.Service;
 import project.springjs.model.Role;
 import project.springjs.repository.RoleRepository;
 
-
 import javax.annotation.PostConstruct;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Service
-public class RoleServiceImp implements RoleService{
+public class RoleServiceImp implements RoleService {
 
     private final RoleRepository roleRepository;
 
@@ -36,6 +35,6 @@ public class RoleServiceImp implements RoleService{
 
     @Override
     public Set<Role> findByIdRoles(List<Long> roles) {
-      return new HashSet<>(roleRepository.findAllById(roles));
+        return new HashSet<>(roleRepository.findAllById(roles));
     }
 }

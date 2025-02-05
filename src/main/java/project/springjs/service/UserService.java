@@ -8,12 +8,19 @@ import java.util.Optional;
 
 public interface UserService {
 
-    List<User> findAll ();
+    List<User> findAll();
+
     User getById(long id);
+
     void save(User user);
+
     void deleteById(long id);
+
     Optional<User> findByUsername(String username);
+
     void addDefaultUser();
+
     void update(User user);
+
     User passwordCoder(User user);
 }

@@ -22,9 +22,9 @@ public class AdminController {
     private final RoleService roleService;
 
     @Autowired
-    public AdminController(RoleService roleService, UserService userService, RoleService roleService1) {
+    public AdminController(RoleService roleService, UserService userService) {
         this.userService = userService;
-        this.roleService = roleService1;
+        this.roleService = roleService;
     }
 
     @GetMapping("/users")

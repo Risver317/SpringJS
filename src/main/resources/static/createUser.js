@@ -1,5 +1,5 @@
 async function createUser() {
-    $('#addUser').click(async () =>  {
+    $('#addUser').click(async () => {
         let addUserForm = $('#addForm')
         let username = addUserForm.find('#usernameCreate').val().trim();
         let password = addUserForm.find('#passwordCreate').val().trim();
@@ -37,13 +37,7 @@ async function createUser() {
             addUserForm.find('#ageCreate').val('');
             addUserForm.find('#emailCreate').val('');
             addUserForm.find(checkedRoles()).val('');
-            let alert = `<div class="alert alert-success alert-dismissible fade show col-12" role="alert" id="successMessage">
-                         User create successful!
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>`;
-            addUserForm.prepend(alert);
+
             $('.nav-tabs a[href="#adminTable"]').tab('show');
         } else {
             let body = await response.json();
